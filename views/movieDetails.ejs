@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<div class="card shadow-sm border-0 mx-auto detail-card">
+  <div class="card-body p-4 p-md-5">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+      <div>
+        <h1 class="h2 mb-1"><%= movie.title %></h1>
+        <p class="text-muted mb-0"><%= movie.genre %> • <%= movie.year %></p>
+      </div>
+      <span class="badge text-bg-dark px-3 py-2"><%= movie.status %></span>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="h6">Genre</h2>
+          <p class="mb-0"><%= movie.genre %></p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="h6">Release Year</h2>
+          <p class="mb-0"><%= movie.year %></p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="h6">Rating</h2>
+          <p class="mb-0"><%= movie.rating %> / 5</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <h2 class="h6">Status</h2>
+          <p class="mb-0"><%= movie.status %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-box mb-4">
+      <h2 class="h6">Notes</h2>
+      <p class="mb-0"><%= movie.notes || 'No notes added.' %></p>
+    </div>
+
+    <div class="d-flex gap-2 flex-wrap">
+      <a href="/movies/edit/<%= movie.id %>" class="btn btn-primary">Edit Movie</a>
+      <a href="/movies" class="btn btn-outline-secondary">Back to Watchlist</a>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

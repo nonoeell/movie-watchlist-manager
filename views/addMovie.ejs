@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<div class="card shadow-sm border-0 form-card mx-auto">
+  <div class="card-body p-4 p-md-5">
+    <h1 class="h2 mb-3">Add New Movie</h1>
+    <p class="text-muted mb-4">Fill in the movie details to add it to your watchlist.</p>
+
+    <form action="/movies/add" method="POST" class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Title</label>
+        <input type="text" name="title" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Genre</label>
+        <input type="text" name="genre" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Release Year</label>
+        <input type="number" name="year" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Rating</label>
+        <input type="number" name="rating" min="1" max="5" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Status</label>
+        <select name="status" class="form-select" required>
+          <option value="Planned">Planned</option>
+          <option value="Watched">Watched</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Notes</label>
+        <textarea name="notes" rows="4" class="form-control"></textarea>
+      </div>
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-warning">Add Movie</button>
+        <a href="/movies" class="btn btn-outline-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

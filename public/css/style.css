@@ -1,0 +1,35 @@
+body {
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #111827, #374151);
+  color: #fff;
+}
+
+.stat-card,
+.movie-card,
+.detail-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.form-card,
+.detail-card {
+  max-width: 900px;
+}
+
+.movie-card {
+  border: 1px solid #eceff4;
+  background: #f9fafb;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.badge {
+  font-size: 0.85rem;
+}
